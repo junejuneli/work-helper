@@ -2,30 +2,37 @@
   "name": "ai-secretary",
   "version": "1.0.0",
   "description": "AI秘书 - 桌面应用",
+  "type": "module",
   "main": "dist-electron/main.js",
   "scripts": {
     "dev": "vite",
-    "dev:electron": "tsc -p tsconfig.node.json && electron .",
+    "dev:electron": "tsc -p tsconfig.node.json && tsc -p tsconfig.preload.json && electron .",
     "build": "tsc && vite build",
-    "build:electron": "tsc -p tsconfig.node.json"
+    "build:electron": "tsc -p tsconfig.node.json && tsc -p tsconfig.preload.json"
   },
-  "keywords": ["ai", "electron", "desktop"],
+  "keywords": [
+    "ai",
+    "electron",
+    "desktop"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@douyinfe/semi-ui": "^2.65.1",
     "@ant-design/x": "^1.0.0",
-    "@anthropic-ai/claude-code": "^2.0.22"
+    "@anthropic-ai/claude-agent-sdk": "^0.1.22",
+    "@douyinfe/semi-icons": "^2.87.1",
+    "@douyinfe/semi-ui": "^2.65.1",
+    "antd": "^5.27.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "electron": "^32.2.6",
-    "vite": "^6.0.3",
-    "typescript": "^5.7.2",
-    "@vitejs/plugin-react": "^4.3.4",
+    "@types/node": "^20.0.0",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
-    "@types/node": "^20.0.0"
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^32.2.6",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
   }
 }

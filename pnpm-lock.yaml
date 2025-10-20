@@ -11,12 +11,18 @@ importers:
       '@ant-design/x':
         specifier: ^1.0.0
         version: 1.6.1(antd@5.27.5(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@anthropic-ai/claude-code':
-        specifier: ^2.0.22
-        version: 2.0.22
+      '@anthropic-ai/claude-agent-sdk':
+        specifier: ^0.1.22
+        version: 0.1.22(zod@3.25.76)
+      '@douyinfe/semi-icons':
+        specifier: ^2.87.1
+        version: 2.87.1(react@18.3.1)
       '@douyinfe/semi-ui':
         specifier: ^2.65.1
         version: 2.87.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      antd:
+        specifier: ^5.27.5
+        version: 5.27.5(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -89,10 +95,11 @@ packages:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
 
-  '@anthropic-ai/claude-code@2.0.22':
-    resolution: {integrity: sha512-3FVySgr2zYrHnQ0deOeCzXdLSa/JkCBm1QR7x4j07puNnvHrFhBo6whv/IMOcSvxL62RRW3csRcGsQhUGPNc/w==}
+  '@anthropic-ai/claude-agent-sdk@0.1.22':
+    resolution: {integrity: sha512-lDwbcwh5goRVUHRRqvX9v6Vj38VME1L+QIaLWzdqbK3Lwkkz9PVLNQFRDEyUOSNd9Fm4cAlfQZ0RCVe8tuo9TA==}
     engines: {node: '>=18.0.0'}
-    hasBin: true
+    peerDependencies:
+      zod: ^3.24.1
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -1865,6 +1872,9 @@ packages:
   yauzl@2.10.0:
     resolution: {integrity: sha512-p4a9I6X6nu6IhoGmBqAcbJy1mlC4j27vEPZX9F4L4/vZT3Lyq1VkFHw/V/PUcB9Buo+DG3iHkT0x3Qya58zc3g==}
 
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
@@ -1934,7 +1944,9 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@anthropic-ai/claude-code@2.0.22':
+  '@anthropic-ai/claude-agent-sdk@0.1.22(zod@3.25.76)':
+    dependencies:
+      zod: 3.25.76
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.33.5
       '@img/sharp-darwin-x64': 0.33.5
@@ -4202,5 +4214,7 @@ snapshots:
     dependencies:
       buffer-crc32: 0.2.13
       fd-slicer: 1.1.0
+
+  zod@3.25.76: {}
 
   zwitch@2.0.4: {}
